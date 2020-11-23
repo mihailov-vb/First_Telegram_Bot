@@ -13,3 +13,19 @@ my_str = "-32"
 my_str = mul_rep(my_str, emoji_dict)
 
 print(my_str)
+
+
+def humidity(n): # Влажность
+    if 0 < n <= 25:
+        return '💧'
+    elif 25 < n <= 50:
+        return '💧💧'
+    elif 50 < n <= 75:
+        return '💧💧💧'
+    elif 75 < n <= 100:
+        return '💧💧💧💧'
+    else:
+        return '💧'
+# print(humidity(51))
+
+
