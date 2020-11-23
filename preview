@@ -10,12 +10,3 @@ def humidity(n): # Влажность
     else:
         return '💧'
 # print(humidity(51))
-
-
-
-
-
-
-
-
-

@@ -1,16 +1,14 @@
 import telebot
-import os
 
-from text import info, info_2, info_3, hello, hello_2, covid_memu, weather_text, error
 from config import TG_TOKEN, users, FEED_REM
-from stickers import sticker_1, sticker_2, sticker_3, sticker_4, sticker_5
+from keyboard import keyboard1, keyboard2, keyboard3, keyboard4, keyboard6, keyboard7, keyboard8, keyboard9, keyboard10
+from models import DATA_RUOTE
+from rss import horoscope_d, horoscope_w, horoscope_m
+from stickers import sticker_1, sticker_2, sticker_3, sticker_5
+from text import info, info_2, hello, hello_2, covid_memu, weather_text, error
 from views import check_currency_EUR, check_currency_USD, covid_spb_sick, covid_spb_recovered, covid_spb_infected, \
     covid_msk_sick, covid_msk_recovered, covid_msk_infected, covid_rus_sick, covid_rus_recovered, covid_rus_infected, \
     covid_mir_sick, covid_mir_recovered, covid_mir_infected, reminders, counter, ramdom_mot, R, first
-from rss import horoscope_d, horoscope_w, horoscope_m
-from keyboard import keyboard1, keyboard2, keyboard3, keyboard4, keyboard6, keyboard7, keyboard8, keyboard9, keyboard10
-from models import DATA_RUOTE
-
 
 bot = telebot.TeleBot(TG_TOKEN)
 
