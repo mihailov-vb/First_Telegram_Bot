@@ -1,18 +1,34 @@
 # Функция меняет символы на  эмоджи
 emoji_dict = {'-':'➖', '1': '1️⃣', '2': '2️⃣', '3': '3️⃣', '4': '4️⃣', '5': '5️⃣', '6': '6️⃣', '7': '7️⃣', '8': '8️⃣', '9': '9️⃣', '0': '0️⃣'}
-
 # Функция для замены нескольких значений
 def mul_rep(target_str, replace_values):
     # получаем заменяемое: подставляемое из словаря в цикле
-        for i, j in replace_values.items():
-                # меняем все target_str на подставляемое
-                        target_str = target_str.replace(i, j)
-                            return target_str
+    for i, j in replace_values.items():
+        # меняем все target_str на подставляемое
+        target_str = target_str.replace(i, j)
+        return target_str
 my_str = "-32"
-
 my_str = mul_rep(my_str, emoji_dict)
-
 print(my_str)
+
+
+
+
+
+
+
+def number_emoji(my_str):
+    emoji_dict = {'-':'❄☀', '1': '1️⃣', '2': '2️⃣', '3': '3️⃣', '4': '4️⃣', '5': '5️⃣', '6': '6️⃣', '7': '7️⃣', '8': '8️⃣', '9': '9️⃣', '0': '0️⃣'}
+    # получаем заменяемое: подставляемое из словаря в цикле
+    for i, j in emoji_dict.items():
+        my_str = my_str.replace(i, j)
+    return my_str
+
+print(number_emoji('-55'))
+
+
+
+
 
 
 def humidity(n): # Влажность
