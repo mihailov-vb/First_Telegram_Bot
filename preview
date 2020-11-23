@@ -23,8 +23,7 @@ def number_emoji(my_str):
     for i, j in emoji_dict.items():
         my_str = my_str.replace(i, j)
     return my_str
-
-print(number_emoji('-55'))
+#print(number_emoji('-55'))
 
 
 
@@ -43,5 +42,12 @@ def humidity(n): # Влажность
     else:
         return '💧'
 # print(humidity(51))
+
+
+
+
+
+
+
 
 
