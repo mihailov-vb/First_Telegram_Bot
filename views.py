@@ -27,7 +27,7 @@ def check_currency_USD():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     return f'Курс одного доллара: {convert[0].text} р.'
-#check_currency_USD()
+print(check_currency_USD())
 
 
 def check_currency_EUR():
@@ -45,11 +45,7 @@ def check_currency_EUR():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     return f'Курс одного евро: {convert[0].text} р.'
-#check_currency_EUR()
-
-
-# 2. Погода (аргументы: дата, город)
-#def weathers():
+print(check_currency_EUR())
 
 
 # 3. Статистика COVID (Аргументы:страна, город)
