@@ -27,13 +27,15 @@ def check_currency_USD():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     return f'Курс одного доллара: {convert[0].text} р.'
-print(check_currency_USD())
+#print(check_currency_USD())
 
 
 def check_currency_EUR():
 # Ссылка на нужную страницу
-    EUR_RUB = 'https://www.google.com/search?q=rehc+tdhj&oq=rehc+tdhj&aqs=chrome..69i57j0i10i433l6j0i10i131i433.' \
-                 '2183j1j7&sourceid=chrome&ie=UTF-8'
+    EUR_RUB = 'https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&oq=%D0%BA%D1%83%D1' \
+              '%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&aqs=chrome..69i57j35i39j0i433l3j0j0i131i433j0i433.4279j1j7&sourceid' \
+              '=chrome&ie=UTF-8'
+
     # Заголовки для передачи вместе с URL
     headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -45,7 +47,7 @@ def check_currency_EUR():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     return f'Курс одного евро: {convert[0].text} р.'
-print(check_currency_EUR())
+#print(check_currency_EUR())
 
 
 # 3. Статистика COVID (Аргументы:страна, город)
