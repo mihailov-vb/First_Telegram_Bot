@@ -303,7 +303,7 @@ def covid_mir_infected():
 # Функция заменена на более совершенную, см ниже с тем же именем
 
 
-def reminders(): # Пармит feed и выводит заголовок, тело и ссылку
+def reminders(): # Парсит feed и выводит заголовок, тело и ссылку
     date = []
     feed = feedparser.parse(FEED_REM)  # Скормил rss библиотеке
     for item_of_news in feed['items']:
