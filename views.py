@@ -327,9 +327,9 @@ def counter(dict):
 # Выдача рандомной картинки
 def R():
     r = random.randint(1,54)
-    return r
+    return '/r'
 
-
+                    
 
 def ramdom_mot(dict_m):
     quote = dict_m[f'{random.randint(1,99)}']
