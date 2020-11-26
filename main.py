@@ -228,7 +228,7 @@ def send_text(message):
         bot.send_message(message.chat.id, covid_memu, reply_markup=keyboard4)
     elif message.text.lower() == '4. 🏁мотиватр':
         bot.send_message(message.chat.id, f'🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁')
-    bot.send_photo(message.chat.id, open(f'image{R()}.jpg', 'rb'))
+        bot.send_photo(message.chat.id, open(f'image{R()}.jpg', 'rb'))
         bot.send_message(message.chat.id,
                          f'🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁\n\n{ramdom_mot(DATA_RUOTE)}\n\n🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁',
                          reply_markup=keyboard4)
