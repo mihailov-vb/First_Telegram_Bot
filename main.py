@@ -117,7 +117,7 @@ def start_message(message):
 def start_message(message):
     bot.send_message(message.chat.id, f'🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁')
 #    bot.send_photo(message.chat.id, open(fr'C:\Users\MVB\PycharmProjects\bot_1\image\({R()}).jpg', 'rb'))
-    bot.send_photo(message.chat.id, open(fr'image\({R()}).jpg', 'rb'))
+    bot.send_photo(message.chat.id, open(f'image\({R()}).jpg', 'rb'))
     bot.send_message(message.chat.id, f'🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁\n\n{ramdom_mot(DATA_RUOTE)}\n\n🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁',
                      reply_markup=keyboard4)
 
