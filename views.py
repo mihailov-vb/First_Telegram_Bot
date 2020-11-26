@@ -327,7 +327,7 @@ def counter(dict):
 # Выдача рандомной картинки
 def R():
     r = random.randint(1,54)
-    return f'/{r}'
+    return f'/({r})'
 
                     
 
