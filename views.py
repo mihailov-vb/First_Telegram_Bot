@@ -45,7 +45,7 @@ def check_currency_EUR():
     # Разбираем через BeautifulSoup
     soup = BeautifulSoup(full_page.content, 'html.parser')
     # Получаем нужное для нас значение и возвращаем его
-    convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
+    convert = soup.findAll("span", {"class": "DFlfde SwHCTb", "data-precision": 2})
     return f'Курс одного евро: {convert[0].text} р.'
 #print(check_currency_EUR())
 
