@@ -26,7 +26,7 @@ def check_currency_USD():
     soup = BeautifulSoup(full_page.content, 'html.parser')
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
-    return f'Курс одного доллара: {convert[0].text} р.'
+    return f'Курс одного доллара: {number_emoji(convert[0].text)} р.'
 #print(check_currency_USD())
 
 
@@ -46,7 +46,7 @@ def check_currency_EUR():
     soup = BeautifulSoup(full_page.content, 'html.parser')
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde SwHCTb", "data-precision": 2})
-    return f'Курс одного евро: {convert[0].text} р.'
+    return f'Курс одного евро: {number_emoji(convert[0].text)} р.'
 #print(check_currency_EUR())
 
 
