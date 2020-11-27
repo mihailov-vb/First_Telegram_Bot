@@ -237,18 +237,10 @@ def send_text(message):
         bot.send_message(message.chat.id, f'*У меня для Вас {counter(FEED_REM)} исторических событий которые произошли '
                                           f'сегодня:*\n⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛\n\n'
                                           f'{reminders()}', reply_markup=keyboard4, parse_mode='Markdown')
-    elif message.text.lower() == '6. 🎬рейтинг на кинопоиск':
-        bot.send_message(message.chat.id, error, reply_markup=keyboard4) # Тут текст о недоделанном коде
-        bot.send_sticker(message.chat.id, sticker_2) # К сообщению прикрепляет стикер
-    elif message.text.lower() == '7. 🔔напоминание':
-        bot.send_message(message.chat.id, error, reply_markup=keyboard4) # Тут текст о недоделанном коде
-        bot.send_sticker(message.chat.id, sticker_2) # К сообщению прикрепляет стикер
     elif message.text.lower() == '6. 🔮гороскоп':
         bot.send_message(message.chat.id,
                          f'*Выбери период на который хочеш узнать гороскоп*\n🔮🔮🔮🔮🔮🔮🔮🔮🔮🔮🔮🔮\n\n',
                          reply_markup=keyboard6, parse_mode='Markdown')
-    elif message.text.lower() == '🔂 перезапустить бота':
-        bot.send_message(message.chat.id, f'Для перезагрузки введи(нажми) команду /start')
 
     elif message.text.lower() == 'расскажи, что ты умееш!':
         bot.send_message(message.chat.id, info, reply_markup=keyboard2)
