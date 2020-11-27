@@ -9,6 +9,25 @@ import random
 from config import FEED_REM
 
 
+def number_emoji(my_str):
+    emoji_dict = {'-': '❄',
+                  '1': '1️⃣',
+                  '2': '2️⃣',
+                  '3': '3️⃣',
+                  '4': '4️⃣',
+                  '5': '5️⃣',
+                  '6': '6️⃣',
+                  '7': '7️⃣',
+                  '8': '8️⃣',
+                  '9': '9️⃣',
+                  '0': '0️⃣'}
+    # получаем заменяемое: подставляемое из словаря в цикле
+    for i, j in emoji_dict.items():
+        my_str = my_str.replace(i, j)
+    return my_str
+#print(number_emoji('145'))
+
+
 # 1. Курс валют
 def check_currency_USD():
 # Ссылка на нужную страницу
@@ -27,15 +46,12 @@ def check_currency_USD():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     return f'Курс одного доллара: {number_emoji(convert[0].text)} р.'
-#print(check_currency_USD())
+print(check_currency_USD())
 
 
 def check_currency_EUR():
-# Ссылка на нужную страницу
-    EUR_RUB = 'https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&oq=%D0%BA%D1%83%D1' \
-              '%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&aqs=chrome..69i57j35i39j0i433l3j0j0i131i433j0i433.4279j1j7&sourceid' \
-              '=chrome&ie=UTF-8'
-
+    EUR_RUB = 'https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&oq=%D0%BA%D1%83&aqs' \
+              '=chrome.1.69i57j69i59l4j69i61l3.2489j0j7&sourceid=chrome&ie=UTF-8'
     # Заголовки для передачи вместе с URL
     headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -47,7 +63,7 @@ def check_currency_EUR():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde SwHCTb", "data-precision": 2})
     return f'Курс одного евро: {number_emoji(convert[0].text)} р.'
-#print(check_currency_EUR())
+print(check_currency_EUR())
 
 
 # 3. Статистика COVID (Аргументы:страна, город)
@@ -391,20 +407,3 @@ def first(s):
 
 
 
-def number_emoji(my_str):
-    emoji_dict = {'-': '❄',
-                  '1': '1️⃣',
-                  '2': '2️⃣',
-                  '3': '3️⃣',
-                  '4': '4️⃣',
-                  '5': '5️⃣',
-                  '6': '6️⃣',
-                  '7': '7️⃣',
-                  '8': '8️⃣',
-                  '9': '9️⃣',
-                  '0': '0️⃣'}
-    # получаем заменяемое: подставляемое из словаря в цикле
-    for i, j in emoji_dict.items():
-        my_str = my_str.replace(i, j)
-    return my_str
-#print(number_emoji('55'))
