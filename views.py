@@ -47,7 +47,7 @@ def check_currency_USD():
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     #return convert
     return number_emoji(convert[0].text)
-print(check_currency_USD())
+#print(check_currency_USD())
 
 
 def check_currency_EUR():
@@ -65,7 +65,7 @@ def check_currency_EUR():
     convert = soup.findAll("span", {"class": "DFlfde SwHCTb", "data-precision": 2})
     #return convert
     return number_emoji(convert[0].text)
-print(check_currency_EUR())
+#print(check_currency_EUR())
 
 
 # 3. Статистика COVID (Аргументы:страна, город)

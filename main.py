@@ -220,8 +220,9 @@ def send_text(message):
         bot.send_message(message.chat.id, f'🔮Гороскоп на месяц🔮\n\n{horoscope_m(11)}', reply_markup=keyboard9, parse_mode='Markdown')
 
     elif message.text.lower() == '1. 📈📉курсы валют usd и eur':
-        bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\n{check_currency_EUR()}\n{check_currency_USD()}\n\n'
-                                      f'Пора бы уже ЗП в валюте получать...', reply_markup=keyboard4)
+        bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\nКурс одного евро:{check_currency_EUR()} р.\n'
+                                          f'Курс одного доллара:{check_currency_USD()} р.\n\n'
+                                          f'Пора бы уже ЗП в валюте получать...', reply_markup=keyboard4)
         bot.send_sticker(message.chat.id, sticker_3)
     elif message.text.lower() == '2. 🌡погода':
         bot.send_message(message.chat.id, weather_text, reply_markup=keyboard4, parse_mode='Markdown')
