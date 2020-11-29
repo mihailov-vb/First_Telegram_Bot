@@ -46,8 +46,8 @@ def check_currency_USD():
     # Получаем нужное для нас значение и возвращаем его
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     #return convert
-    return number_emoji(convert[0].text)
-#print(check_currency_USD())
+    return convert[0].text
+print(check_currency_USD())
 
 
 def check_currency_EUR():
@@ -62,10 +62,10 @@ def check_currency_EUR():
     # Разбираем через BeautifulSoup
     soup = BeautifulSoup(full_page.content, 'html.parser')
     # Получаем нужное для нас значение и возвращаем его
-    convert = soup.findAll("span", {"class": "DFlfde SwHCTb", "data-precision": 2})
+    convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     #return convert
-    return number_emoji(convert[0].text)
-#print(check_currency_EUR())
+    return convert[0].text
+print(check_currency_EUR())
 
 
 # 3. Статистика COVID (Аргументы:страна, город)
@@ -200,7 +200,7 @@ def covid_msk_infected():
 # Кол-во новых заболевших сегодня в России
 def covid_rus_sick():
     # Ссылка на нужную страницу
-    SICK_SPB = 'https://coronavirus-control.ru/'
+    SICK_SPB = 'https://coronavirus-monitor.ru/coronavirus-v-rossii/'
     # Заголовки для передачи вместе с URL
     headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -210,8 +210,12 @@ def covid_rus_sick():
     # Разбираем через BeautifulSoup
     soup = BeautifulSoup(full_page.content, 'html.parser')
     # Получаем нужное для нас значение и возвращаем его
-    convert = soup.findAll("span", {"class": "rednum"})
-    return convert[263].text
+    convert = soup.findAll("div", {"class": "info-block disease"})
+    #convert_2 = convert.find("span").text
+    return convert[0].text
+#print(covid_rus_sick())
+
+
 #covid_rus_sick()
 
 
