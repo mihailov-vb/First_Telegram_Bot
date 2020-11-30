@@ -47,7 +47,7 @@ def check_currency_USD():
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     #return convert
     return convert[0].text
-print(check_currency_USD())
+#print(check_currency_USD())
 
 
 def check_currency_EUR():
@@ -65,7 +65,31 @@ def check_currency_EUR():
     convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
     #return convert
     return convert[0].text
-print(check_currency_EUR())
+#print(check_currency_EUR())
+
+
+# 1. Курс валют
+def check_currency_USD_EUR():
+    USD_RUB = 'https://www.google.com/search?sxsrf=ALeKk01NWm6viYijAo3HXYOEQUyDEDtFEw%3A1584716087546&source=' \
+                     'hp&ei=N9l0XtDXHs716QTcuaXoAg&q=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+%D0%BA+%D1%80%D1%83%D0%B1%' \
+                     'D0%BB%D1%8E&oq=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+&gs_l=psy-ab.3.0.35i39i70i258j0i131l4j0j0i131' \
+                     'l4.3044.4178..5294...1.0..0.83.544.7......0....1..gws-wiz.......35i39.5QL6Ev1Kfk4'
+    EUR_RUB = 'https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&oq=%D0%BA%D1%83&aqs' \
+              '=chrome.1.69i57j69i59l4j69i61l3.2489j0j7&sourceid=chrome&ie=UTF-8'
+    headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/80.0.3987.149 Safari/537.36'}
+    # Парсим всю страницу
+    full_page_usd = requests.get(USD_RUB, headers=headers)
+    full_page_eur = requests.get(EUR_RUB, headers=headers)
+    soup_usd = BeautifulSoup(full_page_usd.content, 'html.parser')
+    soup_eur = BeautifulSoup(full_page_eur.content, 'html.parser')
+    # Получаем нужное для нас значение и возвращаем его
+    convert_usd = soup_usd.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
+    convert_eur = soup_eur.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
+    usd_eur = (convert_usd[0].text, convert_eur[0].text)
+    return usd_eur
+#print(check_currency_USD())
 
 
 # 3. Статистика COVID (Аргументы:страна, город)

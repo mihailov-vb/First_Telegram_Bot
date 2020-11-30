@@ -8,7 +8,8 @@ from stickers import sticker_1, sticker_2, sticker_3, sticker_5
 from text import info, info_2, hello, hello_2, covid_memu, weather_text, error
 from views import check_currency_EUR, check_currency_USD, covid_spb_sick, covid_spb_recovered, covid_spb_infected, \
     covid_msk_sick, covid_msk_recovered, covid_msk_infected, covid_rus_sick, covid_rus_recovered, covid_rus_infected, \
-    covid_mir_sick, covid_mir_recovered, covid_mir_infected, reminders, counter, ramdom_mot, R, first
+    covid_mir_sick, covid_mir_recovered, covid_mir_infected, reminders, counter, ramdom_mot, R, first, \
+    check_currency_USD_EUR
 
 bot = telebot.TeleBot(TG_TOKEN)
 
@@ -46,7 +47,7 @@ def start_message(message):
 @bot.message_handler(commands=['rub_eur_usd'])
 def start_message(message):
 #    bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\n{check_currency_EUR()}\n\n\n' # Тестовая строка (не работает курс евро
-    bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\nКурс одного евро:{check_currency_EUR()} р.\nКурс одного доллара:{check_currency_USD()} р.\n\n'
+    bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\nКурс одного евро:{check_currency_USD_EUR[1]} р.\nКурс одного доллара:{check_currency_USD_EUR[0]} р.\n\n'
                                       f'Пора бы уже ЗП в валюте получать...', reply_markup=keyboard4)
     bot.send_sticker(message.chat.id, sticker_3)
 
