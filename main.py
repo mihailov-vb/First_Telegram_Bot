@@ -47,7 +47,7 @@ def start_message(message):
 @bot.message_handler(commands=['rub_eur_usd'])
 def start_message(message):
 #    bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\n{check_currency_EUR()}\n\n\n' # Тестовая строка (не работает курс евро
-    bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\nКурс одного евро:{check_currency_USD_EUR[1]} р.\nКурс одного доллара:{check_currency_USD_EUR[0]} р.\n\n'
+    bot.send_message(message.chat.id, f'Итак, что мы видим🔎💹\n\nКурс одного евро:{check_currency_USD_EUR()[1]} р.\nКурс одного доллара:{check_currency_USD_EUR()[0]} р.\n\n'
                                       f'Пора бы уже ЗП в валюте получать...', reply_markup=keyboard4)
     bot.send_sticker(message.chat.id, sticker_3)
 
