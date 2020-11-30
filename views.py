@@ -70,12 +70,8 @@ def check_currency_EUR():
 
 # 1. Курс валют
 def check_currency_USD_EUR():
-    USD_RUB = 'https://www.google.com/search?sxsrf=ALeKk01NWm6viYijAo3HXYOEQUyDEDtFEw%3A1584716087546&source=' \
-                     'hp&ei=N9l0XtDXHs716QTcuaXoAg&q=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+%D0%BA+%D1%80%D1%83%D0%B1%' \
-                     'D0%BB%D1%8E&oq=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+&gs_l=psy-ab.3.0.35i39i70i258j0i131l4j0j0i131' \
-                     'l4.3044.4178..5294...1.0..0.83.544.7......0....1..gws-wiz.......35i39.5QL6Ev1Kfk4'
-    EUR_RUB = 'https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B5%D0%B2%D1%80%D0%BE&oq=%D0%BA%D1%83&aqs' \
-              '=chrome.1.69i57j69i59l4j69i61l3.2489j0j7&sourceid=chrome&ie=UTF-8'
+    USD_RUB = 'https://www.google.com/search?sxsrf=ALeKk01NWm6viYijAo3HXYOEQUyDEDtFEw%3A1584716087546&source=hp&ei=N9l0XtDXHs716QTcuaXoAg&q=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+%D0%BA+%D1%80%D1%83%D0%B1%D0%BB%D1%8E&oq=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+&gs_l=psy-ab.3.0.35i39i70i258j0i131l4j0j0i131l4.3044.4178..5294...1.0..0.83.544.7......0....1..gws-wiz.......35i39.5QL6Ev1Kfk4'
+    EUR_RUB = 'https://www.google.com/search?sxsrf=ALeKk00YL8hLYkvm-IT5hgTNWTqPw4TmaA%3A1606760748049&ei=LDnFX4u2ApH4qwHQ4b6IDw&q=%D0%B5%D0%B2%D1%80%D0%BE+%D0%BA+%D1%80%D1%83%D0%B1%D0%BB%D1%8E&oq=%D0%B5%D0%B2%D1%80%D0%BE+%D0%BA+%D1%80%D1%83&gs_lcp=CgZwc3ktYWIQAxgAMgoIABCxAxAUEIcCMgcIABAUEIcCMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6EQgAELADEIoDELcDEOUCEIsDOgQIIxAnOgQIABBDOgcIABCxAxBDOgUIABCxAzoKCAAQsQMQgwEQQ1DZaVjOiwFgmJUBaANwAHgAgAH1AYgBrQmSAQUwLjguMZgBAKABAaoBB2d3cy13aXrIAQq4AQLAAQE&sclient=psy-ab'
     headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/80.0.3987.149 Safari/537.36'}
