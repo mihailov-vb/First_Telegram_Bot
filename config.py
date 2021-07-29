@@ -1,4 +1,4 @@
-TG_TOKEN = '1478057784:AAEiw6NlyZQUWNcouqusGleBRQB26ESYPRQ'
+TG_TOKEN = '1478057784:AAFeKHXtmlEyDfpIVyL8AxPmwA75Ep3w44U'
 
 
 FEED_REM = 'https://www.calend.ru/img/export/today-events.rss'
